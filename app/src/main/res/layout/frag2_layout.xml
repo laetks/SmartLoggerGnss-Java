@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F2F2"
+    android:orientation="vertical">
+    <!-- <Button
+        android:id="@+id/ShareData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:onClick="export"
+        android:text="Export Data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/SaveData" />
+
+    <Button
+        android:id="@+id/SaveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:onClick="save"
+        android:text="SAVE DATA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <ScrollView
+        android:layout_weight="98"
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+
+        <LinearLayout
+            android:id="@+id/dataView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <!--<TextView
+            android:id="@+id/titleGnss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border"
+            android:text="GnssMeasurement :"
+            android:textSize="18dp"
+            android:textColor="?attr/colorPrimary"
+           />-->
+
+
+
+
+            <!--   <TextView
+            android:id="@+id/titleLocation"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_border"
+            android:elevation="2dp"
+            android:text="Location :"
+            android:textSize="18dp"
+            android:textColor="?attr/colorPrimary"/>-->
+
+
+
+            <!-- <TextView
+            android:id="@+id/titleNavigation"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:background="@drawable/my_border"
+            android:elevation="2dp" />-->
+
+
+            <!--<TextView
+            android:id="@+id/titleAntenna"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:background="@drawable/my_border"
+            android:elevation="2dp" />-->
+
+            <!-- <TextView
+                android:id="@+id/antenna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/my_border"
+                android:elevation="2dp"
+                android:textSize="15dp"
+
+                />-->
+
+            <!-- <TextView
+            android:id="@+id/titleSensors"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:background="@drawable/my_border"
+            android:elevation="2dp" />-->
+
+
+
+            --
+
+            <!--<TextView
+            android:id="@+id/dataView"
+            android:layout_width="match_parent"
+            android:layout_height="638dp"
+            android:layout_margin="5dp"
+            android:gravity="bottom"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:textSize="14sp"
+
+            app:layout_constraintBottom_toTopOf="@+id/ShareData"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chronometer" />
+        android:elevation="2dp"-->
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+
+android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="Start log" />
+
+        <!-- <Button
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81" />-->
+
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:enabled="false"
+            android:onClick="stopLog"
+            android:text="Stop Log"
+            app:layout_constraintStart_toEndOf="@+id/start" />
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/stop" />
+    </LinearLayout>
+
+</LinearLayout>
