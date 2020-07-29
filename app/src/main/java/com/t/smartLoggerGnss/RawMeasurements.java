@@ -683,7 +683,7 @@ public class RawMeasurements extends Observer {
      * Starts gnss measure data recovery
      */
     @SuppressLint("MissingPermission")
-    public void startLog() {
+    public void startGnss() {
         locationManager.registerGnssMeasurementsCallback(gnssEventListener);
         stateGnss = true;
     }
@@ -691,7 +691,7 @@ public class RawMeasurements extends Observer {
     /**
      * Stops  gnss measure data recovery
      */
-    public void stopLog() {
+    public void stopGnss() {
         csvMeasurement.clear();
         locationManager.unregisterGnssMeasurementsCallback(gnssEventListener);
         locationManager.removeUpdates(locationListener);

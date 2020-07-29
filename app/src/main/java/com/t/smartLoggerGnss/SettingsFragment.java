@@ -47,9 +47,9 @@ public class SettingsFragment extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 if (isChecked) {
-                    getRawMeasurements().startLog();
+                    getRawMeasurements().startGnss();
                 } else {
-                    getRawMeasurements().stopLog();
+                    getRawMeasurements().stopGnss();
                 }
             }
         });
